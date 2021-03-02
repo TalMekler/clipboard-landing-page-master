@@ -1,0 +1,96 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: rem(130);
+    margin-bottom: rem(150);
+
+    @include window_maxWidth(rem(757)) {
+        padding-top: rem(100);
+        margin-bottom: rem(130);
+    }
+
+    .img-wrapper {
+        width: rem(125);
+        height: auto;
+        margin-bottom: rem(50);
+
+        @include window_maxWidth(rem(757)) {
+            width: rem(100);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .heading {
+        font-size: rem(34);
+        margin-bottom: rem(17.5);
+        font-weight: $fw2;
+        color: $neutral-clr1;
+
+        @include window_maxWidth(rem(757)){
+            text-align: center;
+            font-size: rem(30);
+            padding: 0 rem(32);
+            margin-bottom: rem(20);
+        }
+    }
+
+    .content {
+        font-size: rem(18);
+        line-height: 1.5em;
+        max-width: rem(680);
+        text-align: center;
+        color: $neutral-clr2;
+        margin-bottom: rem(50);
+
+        @include window_maxWidth(rem(757)) {
+            padding: 0 rem(25);
+            font-size: rem(17);
+            line-height: 1.75em;
+            margin-bottom: rem(40);
+        }
+    }
+
+    .cta-container {
+        display: flex;
+        @include window_maxWidth(rem(757)) {
+            flex-direction: column;
+        }
+        .cta {
+            padding: rem(16) rem(36);
+            border-radius: rem(30);
+            color: white;
+            box-shadow: rem(2) rem(6) rem(8) rgba(black, .25);
+            transition: all .25s ease-in-out;
+            font-size: rem(17);
+
+            @include window_maxWidth(rem(757)) {
+                padding: rem(20) rem(60);
+            }
+
+            &:first-child {
+                margin-right: rem(16);
+                @include window_maxWidth(rem(757)) {
+                    margin-right: 0;
+                    margin-bottom: rem(20);
+                }
+            }
+
+            &:hover {
+                filter: brightness(1.2);
+            }
+
+            &.bg_pr-clr1 {
+                background: $primary-clr1;
+            }
+            &.bg_pr-clr2 {
+                background: $primary-clr2;
+            }
+        }
+    }
+}

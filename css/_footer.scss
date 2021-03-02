@@ -1,0 +1,101 @@
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: rem(45) rem(160);
+    background: rgba($neutral-clr2, 0.3);
+    margin-bottom: rem(32);
+
+    @include window_maxWidth(rem(757)) {
+        flex-direction: column;
+        padding: rem(40) rem(88);
+    }
+
+    .img-wrapper {
+        width: rem(55);
+        height: rem(55);
+        @include window_maxWidth(rem(757)) {
+            margin-bottom: rem(35);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .footer-nav {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: rem(55);
+        row-gap: rem(25);
+        @include window_maxWidth(rem(757)) {
+            grid-template-columns: repeat(1, 1fr);
+            margin-bottom: rem(40);
+        }
+        &__item {
+            color: $neutral-clr1;
+            transition: all .25s ease-in-out;
+            @include window_maxWidth(rem(757)) {
+                text-align: center;
+            }
+            &:hover{
+                color: $primary-clr1;
+            }
+            &:nth-child(1) {
+                @include window_minWidth(rem(757)) {
+                    grid-column: 1 / 2;
+                    grid-row: 1 / 2;
+                }
+            }
+            &:nth-child(2) {
+                @include window_minWidth(rem(757)) {
+                    grid-column: 1 / 2;
+                    grid-row: 2 / 3;
+                }
+            }
+            &:nth-child(3) {
+                @include window_minWidth(rem(757)) {
+                    grid-column: 2 / 3;
+                    grid-row: 1 / 2;
+                }
+            }
+            &:nth-child(4) {
+                @include window_minWidth(rem(757)) {
+                    grid-column: 2 / 3;
+                    grid-row: 2 / 3;
+                }
+            }
+            &:nth-child(5) {
+                @include window_minWidth(rem(757)) {
+                    grid-column: 3 / 4;
+                    grid-row: 1 / 2;
+                }
+            }
+        }
+    }
+
+    .social-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        i {
+            font-size: rem(24);
+            color: $neutral-clr1;
+            cursor: pointer;
+            transition: all .25s ease-in-out;
+
+            &:hover {
+                color: $primary-clr1;
+            }
+
+            &:not(:last-child) {
+                margin-right: rem(20);
+                @include window_maxWidth(rem(757)) {
+                    margin-right: rem(35);
+                }
+            }
+        }
+    }
+}

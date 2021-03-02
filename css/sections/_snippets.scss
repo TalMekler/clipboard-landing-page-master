@@ -1,0 +1,111 @@
+.snippets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: rem(150);
+
+    @include window_maxWidth(rem(757)) {
+        margin-bottom: rem(155);
+    }
+
+    .heading {
+        font-size: rem(29);
+        font-weight: $fw2;
+        margin-bottom: rem(30);
+        color: $neutral-clr1;
+
+        @include window_maxWidth(rem(757)) {
+            text-align: center;
+            font-size: rem(30);
+            padding: 0 rem(32);
+            margin-bottom: rem(20);
+        }
+    }
+
+    .content {
+        max-width: rem(694);
+        text-align: center;
+        color: $neutral-clr2;
+        font-size: rem(18);
+        line-height: 1.5em;
+        margin-bottom: rem(83);
+
+        @include window_maxWidth(rem(757)) {
+            padding: 0 rem(25);
+            font-size: rem(17);
+            line-height: 1.75em;
+            margin-bottom: rem(52);
+        }
+    }
+
+    .main-content-container {
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        margin-left: rem(-40);
+
+        @include window_maxWidth(rem(757)) {
+            flex-direction: column;
+            margin-left: rem(0);
+            justify-content: center;
+        }
+
+        .img-wrapper {
+            margin-right: rem(110);
+            height: rem(575);
+            width: auto;
+
+            @include window_maxWidth(rem(757)) {
+                margin-right: rem(0);
+                margin-bottom: rem(50);
+                width: rem(248);
+                height: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .snippets-container {
+            max-width: rem(340);
+
+            @include window_maxWidth(rem(757)) {
+                max-width: 100%;
+                padding: 0 rem(32);
+            }
+
+            .snippet {
+                &:not(:last-child) {
+                    margin-bottom: rem(65);
+                    @include window_maxWidth(rem(757)) {
+                        margin-bottom: rem(48);
+                    }
+                }
+
+                &__heading {
+                    font-weight: $fw2;
+                    font-size: rem(22);
+                    margin-bottom: rem(12);
+                    color: $neutral-clr1;
+                    @include window_maxWidth(rem(757)) {
+                        text-align: center;
+                    }
+                }
+                &__content {
+                    color: $neutral-clr2;
+                    font-size: rem(16);
+                    line-height: 1.5em;
+                    @include window_maxWidth(rem(757)) {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

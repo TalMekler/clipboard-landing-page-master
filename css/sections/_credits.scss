@@ -1,0 +1,29 @@
+.credits {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: rem(165);
+    @include window_maxWidth(rem(757)) {
+        margin-bottom: rem(140);
+    }
+
+    .logos-container {
+        width: 100%;
+        max-width: rem(1111);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include window_maxWidth(rem(757)) {
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        img {
+
+            &:not(:last-child) {
+                margin-bottom: rem(55);
+            }
+        }
+    }
+}
